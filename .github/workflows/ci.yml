@@ -1,0 +1,11 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deterministically failing check
+        run: echo "Simulated flaky CI failure for the recovery drill" && exit 1
